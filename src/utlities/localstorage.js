@@ -15,8 +15,14 @@ const saveCartToLocalStorage = (cart) => {
 
 const addItemToLocalStorage = (id) => {
     const card = getItemFromLocalStorage()
-
-    const newCart = card.push(id)
+    // console.log(card);
+    // console.log(id);
+    
+    const newCart = [...card, id]
+    // card.push(id)
+    // console.log(card);
+    
+    // saveCartToLocalStorage(card)
     saveCartToLocalStorage(newCart)
 }
 export {getItemFromLocalStorage, addItemToLocalStorage}
