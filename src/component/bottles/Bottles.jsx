@@ -7,8 +7,11 @@ const Bottles = ({ bottlesPromise }) => {
     const [cart, setCart] = useState([])
 
     const handleAddToCart = (bottle) => {
-        console.log("click cart");
-        console.log(bottle);
+        // console.log("click cart");
+        // console.log(bottle);
+
+        const newCart = [...cart, bottle]
+        setCart(newCart)
         
         
     }
@@ -18,6 +21,7 @@ const Bottles = ({ bottlesPromise }) => {
     return (
         <div>
             <h2>Awesome Bottle {loadedBottles.length}</h2>
+            <h4>Perches Product : {cart.length}</h4>
             <div className="bottles-Container">
                 {
                     loadedBottles.map(bottle => <Bottle 
