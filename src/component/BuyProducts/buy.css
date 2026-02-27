@@ -1,0 +1,8 @@
+.buy img{
+    width: 150px;
+    border: 1px solid lightgray;
+}
+.buyProducts{
+    display: flex;
+    gap: 20px;
+}
